@@ -37,6 +37,10 @@ spring:
     properties:
       spring.json.trusted.packages: com.smartiadev.base_domain_service.dto
       spring.json.value.default.type: com.smartiadev.base_domain_service.dto.UserSuspendedEvent
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-registry:8761/eureka/
 
 jwt:
   secret: HzuHlbBi+nyXGNVWXYo9I7ojNnxfE8FVnmt1jV0nMeU=
