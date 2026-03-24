@@ -2,9 +2,6 @@ server:
   port: 8088
 
 spring:
-  application:
-    name: auction-service
-
   config:
     import: optional:configserver:http://configuration-service:8888
 
