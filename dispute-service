@@ -2,9 +2,6 @@ server:
   port: 8086
 
 spring:
-  application:
-    name: dispute-service
-
   config:
     import: optional:configserver:http://configuration-service:8888
 
