@@ -6,7 +6,7 @@ spring:
     name: notif-service
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://configuration-service:8888
 
   # ======================
   # Kafka
@@ -41,7 +41,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://eureka-registry:8761/eureka/
 
 jwt:
   secret: HzuHlbBi+nyXGNVWXYo9I7ojNnxfE8FVnmt1jV0nMeU=
