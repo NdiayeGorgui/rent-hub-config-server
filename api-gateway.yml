@@ -208,7 +208,10 @@ springdoc:
 jwt:
   secret: HzuHlbBi+nyXGNVWXYo9I7ojNnxfE8FVnmt1jV0nMeU=
 
-
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-registry:8761/eureka/
 logging:
   level:
     org.springframework.security: DEBUG
