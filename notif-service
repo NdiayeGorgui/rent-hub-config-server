@@ -2,9 +2,6 @@ server:
   port: 8085
 
 spring:
-  application:
-    name: notif-service
-
   config:
     import: optional:configserver:http://configuration-service:8888
 
