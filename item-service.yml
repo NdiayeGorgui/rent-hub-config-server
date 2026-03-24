@@ -6,7 +6,7 @@ spring:
     import: optional:configserver:http://configuration-service:8888
 
   datasource:
-    url: jdbc:postgresql://postgres:5432/smartiadev_db
+    url: jdbc:postgresql://postgres:5432/renthub_db
     username: postgres
     password: password
 
