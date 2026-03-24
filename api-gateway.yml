@@ -13,12 +13,12 @@ spring:
         # AUTH SERVICE
         # =========================
         - id: auth-service
-          uri: http://localhost:8081
+          uri: http://auth-service:8081
           predicates:
             - Path=/api/auth/**, /api/profile/**, /api/admin/users/**, /api/admin/stats/**, /api/users/**
 
         - id: auth-service-docs
-          uri: http://localhost:8081
+          uri: http://auth-service:8081
           predicates:
             - Path=/auth-service/v3/api-docs
           filters:
@@ -28,18 +28,18 @@ spring:
         # ITEM SERVICE
         # =========================
         - id: item-service
-          uri: http://localhost:8082
+          uri: http://item-service:8082
           predicates:
             - Path=/api/items/**, /api/admin/items/**
 
         # ROUTE POUR LES IMAGES
         - id: item-service-uploads
-          uri: http://localhost:8082
+          uri: http://item-service:8082
           predicates:
             - Path=/uploads/**
 
         - id: item-service-docs
-          uri: http://localhost:8082
+          uri: http://item-service:8082
           predicates:
             - Path=/item-service/v3/api-docs
           filters:
@@ -49,12 +49,12 @@ spring:
         # RENTAL SERVICE
         # =========================
         - id: rental-service
-          uri: http://localhost:8083
+          uri: http://rental-service:8083
           predicates:
             - Path=/api/rentals/**, /api/admin/rentals/**
 
         - id: rental-service-docs
-          uri: http://localhost:8083
+          uri: http://rental-service:8083
           predicates:
             - Path=/rental-service/v3/api-docs
           filters:
@@ -64,12 +64,12 @@ spring:
         # REVIEW SERVICE
         # =========================
         - id: review-service
-          uri: http://localhost:8084
+          uri: http://review-service:8084
           predicates:
             - Path=/api/reviews/**, /api/admin/reviews/**
 
         - id: review-service-docs
-          uri: http://localhost:8084
+          uri: http://review-service:8084
           predicates:
             - Path=/review-service/v3/api-docs
           filters:
@@ -79,12 +79,12 @@ spring:
         # NOTIFICATION SERVICE
         # =========================
         - id: notif-service
-          uri: http://localhost:8085
+          uri: http://notif-service:8085
           predicates:
             - Path=/api/notifications/**
 
         - id: notif-service-docs
-          uri: http://localhost:8085
+          uri: http://notif-service:8085
           predicates:
             - Path=/notif-service/v3/api-docs
           filters:
@@ -94,12 +94,12 @@ spring:
         # DISPUTE SERVICE
         # =========================
         - id: dispute-service
-          uri: http://localhost:8086
+          uri: http://dispute-service:8086
           predicates:
             - Path=/api/disputes/**, /api/admin/disputes/**
 
         - id: dispute-service-docs
-          uri: http://localhost:8086
+          uri: http://dispute-service:8086
           predicates:
             - Path=/dispute-service/v3/api-docs
           filters:
@@ -109,12 +109,12 @@ spring:
         # PAYMENTS SERVICE
         # =========================
         - id: payments-service
-          uri: http://localhost:8087
+          uri: http://payments-service:8087
           predicates:
             - Path=/api/payments/**
 
         - id: payments-service-docs
-          uri: http://localhost:8087
+          uri: http://payments-service:8087
           predicates:
             - Path=/payments-service/v3/api-docs
           filters:
@@ -124,12 +124,12 @@ spring:
         # Subscription SERVICE
         # =========================
         - id: subscription-service
-          uri: http://localhost:8089
+          uri: http://subscription-service:8089
           predicates:
             - Path=/api/subscriptions/**
 
         - id: subscription-service-docs
-          uri: http://localhost:8089
+          uri: http://subscription-service:8089
           predicates:
             - Path=/subscription-service/v3/api-docs
           filters:
@@ -139,12 +139,12 @@ spring:
         # Auction SERVICE
         # =========================
         - id: auction-service
-          uri: http://localhost:8088
+          uri: http://auction-service:8088
           predicates:
             - Path=/api/auctions/**
 
         - id: auction-service-docs
-          uri: http://localhost:8088
+          uri: http://auction-service:8088
           predicates:
             - Path=/auction-service/v3/api-docs
           filters:
@@ -154,12 +154,12 @@ spring:
         # Messaging SERVICE
         # =========================
         - id: messaging-service
-          uri: http://localhost:8090
+          uri: http://messaging-service:8090
           predicates:
             - Path=/api/messages/**, /api/faqs/**
 
         - id: messaging-service-docs
-          uri: http://localhost:8090
+          uri: http://messaging-service:8090
           predicates:
             - Path=/messaging-service/v3/api-docs
           filters:
@@ -169,7 +169,7 @@ spring:
         # NOTIFICATION WEBSOCKET
         # =========================
         - id: notif-service-ws
-          uri: ws://localhost:8085
+          uri: ws://notif-service:8085
           predicates:
             - Path=/ws-notifications/**
 
@@ -177,7 +177,7 @@ spring:
         # MESSAGING WEBSOCKET
         # =========================
         - id: messaging-service-ws
-          uri: ws://localhost:8090
+          uri: ws://messaging-service:8090
           predicates:
             - Path=/ws-chat/**
 
