@@ -2,9 +2,6 @@ server:
   port: 8083
 
 spring:
-  application:
-    name: rental-service
-
   config:
     import: optional:configserver:http://configuration-service:8888
 
