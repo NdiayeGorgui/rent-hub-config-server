@@ -1,9 +1,6 @@
 spring:
   application:
     name: api-gateway
-server:
-  port: 8080
-spring:
   cloud:
     gateway:
       routes:
@@ -31,7 +28,6 @@ spring:
           predicates:
             - Path=/api/items/**, /api/admin/items/**
 
-        # ROUTE POUR LES IMAGES
         - id: item-service-uploads
           uri: http://item-service:8082
           predicates:
@@ -120,7 +116,7 @@ spring:
             - RewritePath=/payments-service/v3/api-docs, /v3/api-docs
 
         # =========================
-        # Subscription SERVICE
+        # SUBSCRIPTION SERVICE
         # =========================
         - id: subscription-service
           uri: http://subscription-service:8089
@@ -135,7 +131,7 @@ spring:
             - RewritePath=/subscription-service/v3/api-docs, /v3/api-docs
 
         # =========================
-        # Auction SERVICE
+        # AUCTION SERVICE
         # =========================
         - id: auction-service
           uri: http://auction-service:8088
@@ -150,7 +146,7 @@ spring:
             - RewritePath=/auction-service/v3/api-docs, /v3/api-docs
 
         # =========================
-        # Messaging SERVICE
+        # MESSAGING SERVICE
         # =========================
         - id: messaging-service
           uri: http://messaging-service:8090
@@ -180,6 +176,9 @@ spring:
           predicates:
             - Path=/ws-chat/**
 
+server:
+  port: 8080
+
 # =========================
 # SWAGGER AGRÉGÉ
 # =========================
@@ -207,7 +206,6 @@ springdoc:
       - name: messaging-service
         url: /messaging-service/v3/api-docs
 
-
 jwt:
   secret: HzuHlbBi+nyXGNVWXYo9I7ojNnxfE8FVnmt1jV0nMeU=
 
@@ -215,6 +213,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-registry:8761/eureka/
+
 logging:
   level:
     org.springframework.security: DEBUG
