@@ -1,5 +1,3 @@
-server:
-  port: 8081
 
 spring:
   config:
@@ -18,6 +16,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
+  
 
   kafka:
     bootstrap-servers: kafka:9092
@@ -34,6 +33,8 @@ spring:
     properties:
       spring.json.trusted.packages: com.smartiadev.base_domain_service.dto
       spring.json.value.default.type: com.smartiadev.base_domain_service.dto.UserSuspendedEvent
+server:
+  port: 8081
 eureka:
   client:
     service-url:
