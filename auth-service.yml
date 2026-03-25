@@ -5,6 +5,9 @@ spring:
     url: jdbc:postgresql://postgres:5432/renthub_db
     username: postgres
     password: password
+  sql:
+    init:
+      mode: always
   jpa:
     hibernate:
       ddl-auto: update
