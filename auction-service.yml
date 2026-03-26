@@ -6,7 +6,7 @@ spring:
     import: optional:configserver:http://configuration-service:8888
 
   datasource:
-   url: jdbc:postgresql://postgres:5432/renthub_db
+    url: jdbc:postgresql://postgres:5432/renthub_db
     username: postgres
     password: password
 
@@ -21,12 +21,13 @@ spring:
         default_schema: auction_schema
 
   kafka:
-    bootstrap-servers: kafka:9092   
+    bootstrap-servers: kafka:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.add.type.headers: true
+
     consumer:
       group-id: auction-service
       auto-offset-reset: earliest
