@@ -1,6 +1,17 @@
 spring:
   config:
     import: "optional:configserver:http://configuration-service:8888"
+  mail:
+    host: mailhog
+    port: 1025
+    username: ""
+    password: ""
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
   datasource:
     url: jdbc:postgresql://postgres:5432/renthub_db
     username: postgres
